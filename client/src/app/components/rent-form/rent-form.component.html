@@ -10,26 +10,26 @@
 <!-- year - error msg -->
 <div *ngIf="rentForm.controls.year.touched && rentForm.controls.year.invalid" class="error">
   <div *ngIf="rentForm.controls.year.errors?.required">
-    Year is required
+    <h3>Year is required</h3>
   </div>
   <div *ngIf="rentForm.controls.year.errors?.min">
-    The year is incorrect - less then 1980
+    <h3>The year is incorrect - less then 1980</h3>
   </div>
   <div *ngIf="rentForm.controls.year.errors?.max">
-    The year is incorrect - more then {{ current_year }}
+    <h3>The year is incorrect - more then {{ current_year }}</h3>
   </div>
 </div>
 
 <!-- month - error msg -->
 <div *ngIf="rentForm.controls.month.touched && rentForm.controls.month.invalid" class="error">
   <div *ngIf="rentForm.controls.month.errors?.required">
-    Month is required
+    <h3>Month is required</h3>
   </div>
   <div *ngIf="rentForm.controls.month.errors?.min">
-    The month is incorrect - less then 1
+    <h3>The month is incorrect - less then 1</h3>
   </div>
   <div *ngIf="rentForm.controls.month.errors?.max">
-    The month is incorrect - more then 12
+    <h3>The month is incorrect - more then 12</h3>
   </div>
 </div>
 
