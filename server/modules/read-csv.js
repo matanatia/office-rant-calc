@@ -4,11 +4,11 @@ const readline = require('readline');
 
 const csv_path = 'rent_data.csv';
 const csv_columns = ['Capacity', 'Monthly Price', 'Start Day', 'End Day'];
-const csv_data = [];
 
 const readCsv = () => {
-    return new Promise( (resolve) => {
-
+    return new Promise( (resolve, reject) => {
+        const csv_data = [];
+        
         const rd = readline.createInterface({
             input: fs.createReadStream(csv_path)
         });
@@ -79,7 +79,7 @@ const readCsv = () => {
         rd.on('close', () => {
             //remove the headers from the array
             csv_data.splice(0, 1);
-            resolve({data : csv_data});
+            resolve(csv_data);
         });
 
     });
