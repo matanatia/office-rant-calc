@@ -8,7 +8,7 @@ const cors = require('cors');
 const rentRouter = require('./routes/rent');
 
 //vars for farther use in the app
-const port = process.env.PORT || 5000;
+const port = 5000 || process.env.PORT;
 
 //middlewares:
 app.use(express.static(path.join(__dirname, 'public')));
